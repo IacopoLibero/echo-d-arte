@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ec(h)o d'Arte</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <h1 class="logo">Ec(h)o d'Arte</h1>
+            </div>
+            <nav>
+                <div class="nav-container">
+                    <button class="nav-toggle" id="navToggle">☰ Menu</button>
+                    <ul class="menu" id="menu">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="showContent('home'); return false;">Home Page</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="showContent('festival-passati'); return false;">Festival Passati</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="showContent('festival-barca'); return false;">Sulla stessa Barca</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="showContent('contest'); return false;">Contest</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="showContent('merch'); return false;">Merch</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link" onclick="showContent('contattaci'); return false;">Contattaci</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <!-- Home Page -->
+        <section id="home" class="content active">
+            <div class="section">
+                <h2>Chi Siamo</h2>
+                <p>Ec(h)o d'Arte è un'associazione culturale che si impegna a promuovere l'accesso alle arti performative nelle periferie di Bologna. <br>La nostra missione è valorizzare i talenti locali e includere le differenti etnie che popolano le periferie attraverso iniziative culturali, laboratori e spettacoli.</p>
+            </div>
+            <h2 class="page-title">Mission e Vision</h2>
+            <div class="mission-vision">
+                <div class="mission">
+                    <h2>Mission</h2>
+                    <p>A partire da dicembre 2021, l'associazione culturale Ec(h)o d'Arte s'impegna a promuovere l'accesso alle arti performative nelle periferie di Bologna. Attraverso laboratori, spettacoli, eventi ed iniziative culturali, lavoriamo per coinvolgere la cittadinanza, valorizzare i talenti locali e includere le differenti etnie che popolano le periferie per costruire comunità più vive, inclusive e consapevoli del proprio potenziale creativo.</p>
+                </div>
+                
+                <div class="vision">
+                    <h2>Vision</h2>
+                    <p>Immaginiamo un futuro in cui ogni quartiere sia un centro pulsante di cultura, dove l'arte diventa strumento di rigenerazione urbana, inclusione e coesione sociale. Vogliamo una realtà in cui la periferia non sia più marginale, ma cuore vibrante di innovazione artistica e coesione culturale.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Festival Passati -->
+        <section id="festival-passati" class="content">
+            
+            <div class="section">
+                <h2>Festival dell'Inclusione "Ponticelli di Culture"</h2>
+                <p>Festival per l'Inclusione tra le Popolazioni<br>
+                Un fine settimana all'insegna dell'incontro, della condivisione e della celebrazione della diversità. Laboratori interculturali, narrazioni dal mondo, danze tradizionali, assaggi di cucine lontane e momenti di dialogo per costruire insieme ponti di comprensione.</p>
+            </div>
+            
+            <div class="section">
+                <h2>"Suoni che Uniscono" - Festival della Musica Multiculturale</h2>
+                <p>Lasciati trasportare dalle onde sonore di "Suoni che Uniscono"!<br>
+                Ec(h)o d'Arte ti invita al festival della musica che abbatte i confini. Artisti provenienti da tutto il mondo si esibiranno in concerti, performance e jam session all'insegna della contaminazione e dell'armonia tra i popoli.</p>
+            </div>
+            
+            <div class="section">
+                <h2>"Arte Senza Confini" - Festival delle Espressioni Creative</h2>
+                <p>Apri i tuoi occhi alla bellezza di "Arte Senza Confini"!<br>
+                Ec(h)o d'Arte celebra la creatività in tutte le sue forme con un festival ricco di mostre, performance artistiche, laboratori creativi per tutte le età, installazioni interattive e incontri con artisti. Un'occasione unica per immergersi in un universo di colori, forme e idee.</p>
+            </div>
+            
+            <div class="section">
+                <h2>"Respiri di Natura" - Festival dell'Ecologia e della Sostenibilità</h2>
+                <p>Unisciti a noi per "Respiri di Natura"!<br>
+                Ec(h)o d'Arte ti invita a un festival dedicato alla scoperta e alla tutela del nostro pianeta. Escursioni naturalistiche, laboratori di riciclo creativo, conferenze sull'ambiente, mercatino di prodotti biologici e artigianali, attività per bambini e momenti di riflessione per un futuro più sostenibile.</p>
+            </div>
+        </section>
+        
+        <!-- Festival Sulla Stessa Barca -->
+        <section id="festival-barca" class="content">
+            <h2 class="page-title">"Sulla Stessa Barca"</h2>
+            
+            <div class="section">
+                <p>Il festival "Sulla stessa Barca" è il nostro evento di punta per il 2025! Un'esperienza culturale unica che unisce le comunità attraverso danza, musica e cibo.</p>
+                <p>La data da segnare sul calendario è il <strong>31 Maggio 2025</strong> e ci troverai al Parco Nicholas Green presso il quartiere Barca di Bologna.</p>
+            </div>
+            <div class="section">
+                <h2>Informazioni Generali</h2>
+                <p>L'offerta proposta dal festival "Sulla stessa barca" si struttura in una giornata di evento, il 31/05/2025 presso il Parco Nicholas Green al quartiere Barca a Bologna. La giornata si sviluppa dalle 10.00 alle 12.00 e dalle 14.30 alle 18.30 con vari laboratori per bambini e famiglie sulle danze etniche e tradizionali portate dalle scuole di danza del quartiere (NOMI… e tanti altri!); durante i laboratori saranno allestiti degli stand per mangiare e bere in compagnia tutta la giornata ma anche di associazioni (NOMI…) che hanno sede nel quartiere. La sera il festival termina con lo spettacolo di freestyle di artisti emergenti dalle 19.00 alle 21.00 e prosegue con la performance di Ballo e Kime e Laurino per ballare e divertirsi fino alle 23.30.</p>
+                
+                <p>L'entrata sarà possibile pagando un biglietto di entrata intero di 10 euro o ridotto di 8 euro (sotto i 13 anni).</p>
+            </div>
+
+            <div class="section">
+                <p>L'obiettivo del festival "Sulla stessa barca", organizzato dall'associazione Ec(h)o d'arte, è quello di far conoscere e valorizzare le culture di tutte le comunità che abitano il territorio di Bologna. Ma come fare? Ec(h)o d'arte vuole portare nei nostri quartieri la cultura per favorire l'inclusione sociale e la conoscenza l'uno dell'altro attraverso uno scambio di arti, musiche e danze, e perché no? anche del buon cibo!</p>
+                
+                <p>Il festival si incentra sulle danze tipiche delle varie comunità che vivono e abitano il quartiere Barca, appena fuori Bologna. La volontà è di creare uno scambio culturale basato sul ballo, la musica, il cibo e tanto divertimento! La giornata di festa si incentra su svariati laboratori per famiglie sulle danze etniche, ma anche tradizionali bolognesi, portate dagli insegnanti delle scuole di ballo della zona durante il giorno e termina la sera con lo spettacolo di freestyle di artisti emergenti con la partecipazione finale di Ballo e Kime e Laurino direttamente dal cuore del quartiere.</p>
+            </div>
+            
+            
+        </section>
+        
+        <!-- Contest -->
+        <section id="contest" class="content">
+            <h2 class="page-title">Contest</h2>
+            
+            <div class="section">
+                <p>Questa sezione è dedicata ai nostri contest. I dettagli saranno pubblicati prossimamente.</p>
+            </div>
+        </section>
+        
+        <!-- Merch -->
+        <section id="merch" class="content">
+            <h2 class="page-title">Merchandising</h2>
+            
+            <div class="section">
+                <p>Scopri la nostra collezione di merchandise. I prodotti saranno disponibili prossimamente.</p>
+            </div>
+            
+            <div class="section">
+                <h2>Immagini</h2>
+                <p>Le immagini del nostro merchandising saranno caricate prossimamente.</p>
+            </div>
+        </section>
+        
+        <!-- Contattaci -->
+        <section id="contattaci" class="content">
+            <h2 class="page-title">Contattaci</h2>
+            
+            <div class="section">
+                <div style="text-align: center; font-size: 1.2rem; margin: 20px 0;">
+                    <p><strong>Email:</strong> ec(h)odarte2021@gmail.com</p>
+                    <p><strong>Telefono:</strong> 051 4538990</p>
+                    <p><strong>Instagram:</strong> @ec(h)odarte.2021</p>
+                </div>
+                
+                <form action="#" method="post" style="max-width: 600px; margin: 0 auto;">
+                    <div style="margin-bottom: 15px;">
+                        <label for="nome" style="display: block; margin-bottom: 5px;">Nome:</label>
+                        <input type="text" id="nome" name="nome" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+                        <input type="email" id="email" name="email" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="messaggio" style="display: block; margin-bottom: 5px;">Messaggio:</label>
+                        <textarea id="messaggio" name="messaggio" rows="5" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
+                    </div>
+                    <div style="text-align: center;">
+                        <button type="submit" style="background-color: var(--highlight-color); border: none; padding: 10px 20px; color: white; border-radius: 4px; cursor: pointer; font-weight: bold;">Invia Messaggio</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Ec(h)o d'Arte - Associazione Culturale</p>
+    </footer>
+    
+</body>
+<script src="script.js"></script>
+</html>
