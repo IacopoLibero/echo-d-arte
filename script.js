@@ -58,10 +58,58 @@ function updateCountdown() {
     }
 }
 
+// Funzione per impostare un cookie
+function setCookie(name, value, days) {
+    let expires = '';
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + (value || '') + expires + '; path=/; SameSite=Strict';
+}
+
+// Funzione per leggere un cookie
+function getCookie(name) {
+    const nameEQ = name + '=';
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+// Funzione per controllare e aggiornare la cache
+function checkAndRefreshCache() {
+    const currentVersion = '20250507'; // Versione attuale del sito (aggiornare quando si fanno modifiche)
+    const lastVisit = getCookie('lastVisit');
+    const lastVersion = getCookie('siteVersion');
+    
+    // Imposta la data dell'ultima visita
+    setCookie('lastVisit', new Date().toISOString(), 30);
+    
+    // Se è la prima visita o la versione è cambiata, aggiorna i cookie e forza il refresh
+    if (!lastVisit || lastVersion !== currentVersion) {
+        console.log('Nuova versione del sito rilevata o prima visita. Aggiornamento cache...');
+        setCookie('siteVersion', currentVersion, 30);
+        
+        // Se non è la prima visita ma la versione è cambiata, forza il refresh
+        if (lastVisit && lastVersion !== currentVersion) {
+            // Forza il reload senza usare la cache
+            window.location.reload(true);
+        }
+    }
+}
+
 // Esegui aggiornamento del countdown quando la pagina è caricata
 document.addEventListener('DOMContentLoaded', function() {
     // Se siamo nella pagina contest, aggiorna subito il countdown
     if (document.querySelector('.content.active') && document.querySelector('.content.active').id === 'contest') {
         updateCountdown();
     }
+    
+    // Verifica se è necessario aggiornare la cache
+    checkAndRefreshCache();
 });
