@@ -46,7 +46,7 @@ header {
 }
 
 .logo {
-    font-size: 90px;
+    font-size: 60px;
     font-weight: bold;
     letter-spacing: 1px;
     background-color: black;
@@ -205,10 +205,8 @@ footer {
     background-color: var(--menu-bg);
     text-align: center;
     border-radius: 8px 8px 0 0;
-    padding: 20px;
+    padding: 12.5px;
     margin-top: auto;
-    position: sticky;
-    bottom: 0;
     width: 100%;
 }
 
